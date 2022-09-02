@@ -5,7 +5,7 @@ $ws = New-Object -ComObject WScript.Shell
 $wsr = $ws.popup("目标网站是否有SSL证书（https://）？",0,"请选择",4 + 64)
 if ($wsr -eq 6){$choose = $httpsq} else{$choose = $httpq}
 $urlname = $choose + $name + "/"
-./xray webscan --basic-crawler $urlname --html-output out.html
+./Xray webscan --basic-crawler $urlname --html-output out.html
 $Ubakdate = "{0:yyyy}" -f (Get-Date)
 $Filename = $name + "_" + $Ubakdate + "年"
 $Ubakdate = "{0:MM}" -f (Get-Date)
