@@ -13,7 +13,7 @@
 - 目前只内置了Xray基础爬虫模式扫描（webscan --basic-crawler）的这个命令，后续会逐步更新
 
 ## 3#使用方式
-1. 直接将XrayEasyLoader_v1.0.ps1放入本地的Xray文件夹，保证Xray主程序与脚本中的一致（脚本内为Xray.exe），如不一致可自行修改
+1. 直接将XrayEasyLoader.ps1放入本地的Xray文件夹，保证Xray主程序与脚本中的一致（脚本内为Xray.exe），如不一致可自行修改
 2. 运行脚本即可，如果有结果，会自动在Xray目录导出为“目标网站_时间.html”的文件
 
 你可以给脚本创建快捷方式，本项目会提供Xray的ico图标，给快捷方式换上就行了（主要我有点强迫症）
