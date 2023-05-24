@@ -1,4 +1,6 @@
-$name = Read-Host '请输入网站地址(不带http://)'
+$name = Read-Host '请输入网站地址'
+$name = $name.replace('http://','')
+$name = $name.replace('https://','')
 $httpsq = "https://"
 $httpq = "http://"
 $ws = New-Object -ComObject WScript.Shell  
@@ -17,9 +19,11 @@ $Filename = $Filename + $Ubakdate + "时"
 $Ubakdate = "{0:mm}" -f (Get-Date)
 $Filename = $Filename + $Ubakdate + "分.html"
 $End = $Filename -replace '[:]','_'
+$End = $End.replace('/','-')
 if(Test-Path output.html){
 Write-Output "[+] 对于目标的扫描发现可利用点，正在导出报告并重命名"
 rename-Item output.html -NewName $End
+cmd /c "pause"
 }
 Else{
 Write-Output "[-] 对于目标的扫描并未发现漏洞，无导出报告"
